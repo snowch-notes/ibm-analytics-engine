@@ -105,7 +105,10 @@ fs.s3a.endpoint=<EndPoint URL>
 
 For more information, see: https://ci.apache.org/projects/flink/flink-docs-release-1.4/ops/deployment/yarn_setup.html
 
-    # Run a Flink session - TODO how to determine arguments (see below)?
+    # Run a Flink session
+    # TODO how to determine what values to set for the arguments?
+    #      see https://ci.apache.org/projects/flink/flink-docs-release-1.4/ops/deployment/yarn_setup.html#start-a-session)
+    
     ./flink-1.4.0/bin/yarn-session.sh -d -n 4
 
     # View the Flink session running on yarn
@@ -133,22 +136,3 @@ For more information, see: https://ci.apache.org/projects/flink/flink-docs-relea
 
     # Verify the output
     hadoop fs -cat cos://${S3_BUCKET}.${S3_SERVICENAME}/license-word-count.txt
-
-----
-### Flink session arguments:
-
-```
-Usage:
-   Required
-     -n,--container <arg>   Number of YARN container to allocate (=Number of Task Managers)
-   Optional
-     -D <arg>                        Dynamic properties
-     -d,--detached                   Start detached
-     -jm,--jobManagerMemory <arg>    Memory for JobManager Container [in MB]
-     -nm,--name                      Set a custom name for the application on YARN
-     -q,--query                      Display available YARN resources (memory, cores)
-     -qu,--queue <arg>               Specify YARN queue.
-     -s,--slots <arg>                Number of slots per TaskManager
-     -tm,--taskManagerMemory <arg>   Memory per TaskManager Container [in MB]
-     -z,--zookeeperNamespace <arg>   Namespace to create the Zookeeper sub-paths for HA mode
- ```
