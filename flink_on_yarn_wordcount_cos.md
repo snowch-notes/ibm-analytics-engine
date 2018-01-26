@@ -4,7 +4,7 @@ Run the Flink Word Count example on IBM Analytics Engine as a yarn application.
 
 In this example, Flink reads a license from COS S3 performs a word count and saves the output to COS S3.
 
-IAE setups up S3 to be accessed with a cos:// prefix whereas Flink requires a s3:// prefix, so in this example we have to configure both endpoints.
+IAE sets up S3 to be accessed with a cos:// prefix whereas Flink requires a s3:// prefix, so in this example we have to configure both endpoints.
 
 ### Prerequisites
 
