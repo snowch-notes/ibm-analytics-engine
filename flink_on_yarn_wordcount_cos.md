@@ -2,6 +2,27 @@
 
 Run the Flink Word Count example on IBM Analytics Engine as a yarn application
 
+### Prerequisites
+
+These instructions assume that you have a IBM COS S3 endpoint configured with HMAC authentication, i.e.
+
+Use the following steps to create a service credential:
+
+ - Log in to the IBM Cloud console and navigate to your instance of Object Storage.
+ - In the side navigation, click Service Credentials.
+ - Click New credential and provide the necessary information. If you want to generate HMAC credentials, specify the following in the Add Inline Configuration Parameters (Optional) field: `{"HMAC":true}`
+ - Click Add to generate service credential.
+ - Open the new service credentials and find the attributes:
+ 
+```
+"cos_hmac_keys": {
+  "access_key_id": "<Access Key ID>",
+  "secret_access_key": "<Secret Access Key>"
+},
+```
+ - The endpoint can be found by going to the side navigation, click Endpoint
+ - select the **private** endpoint for your location.
+
 ### Configure IAE for COS
 
  - Open the Ambari console, and then the advanced configuration for HDFS.
