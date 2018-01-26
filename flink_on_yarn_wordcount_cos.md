@@ -80,6 +80,10 @@ fs.s3a.endpoint=<EndPoint URL>
     FLINK_LIB=$FLINK_HOME/lib/
     FLINK_CONF=$FLINK_HOME/conf/flink-conf.yaml
     
+ ### Setup Flink S3
+ 
+ For more information, see: https://ci.apache.org/projects/flink/flink-docs-release-1.4/ops/deployment/aws.html
+    
     # Add S3 driver
     cp -f flink-1.4.0/opt/flink-s3-fs-hadoop-1.4.0.jar $FLINK_LIB
     
@@ -97,12 +101,9 @@ fs.s3a.endpoint=<EndPoint URL>
     
     echo 'fs.hdfs.hadoopconf:  /etc/hadoop/conf' >> $FLINK_CONF
     
-    # Set the S3 driver parameters
-    #echo s3.access-key: $S3_ACCESS_KEY >> $FLINK_CONF
-    #echo s3.secret-key: $S3_SECRET_KEY >> $FLINK_CONF
-    #echo s3.endpoint: $S3_ENDPOINT >> $FLINK_CONF
-    
 ### Start Flink session
+
+For more information, see: https://ci.apache.org/projects/flink/flink-docs-release-1.4/ops/deployment/yarn_setup.html
 
     # Run a Flink session - TODO how to determine arguments (see below)?
     ./flink-1.4.0/bin/yarn-session.sh -d -n 4
@@ -123,7 +124,9 @@ fs.s3a.endpoint=<EndPoint URL>
 
     export HADOOP_CONF_DIR=/etc/hadoop/conf
 
-    # Run the flink word count
+    # Run the flink word count 
+    # For more information, see: https://ci.apache.org/projects/flink/flink-docs-release-1.4/ops/deployment/yarn_setup.html
+    
     ./flink-1.4.0/bin/flink run ./flink-1.4.0/examples/batch/WordCount.jar \
        --input "s3://${S3_BUCKET}/LICENSE-2.0.txt" \
        --output "s3://${S3_BUCKET}/license-word-count.txt"
