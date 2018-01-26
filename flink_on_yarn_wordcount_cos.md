@@ -4,7 +4,7 @@ Run the Flink Word Count example on IBM Analytics Engine as a yarn application
 
 ### Prerequisites
 
-These instructions assume that you have a IBM COS S3 endpoint configured with HMAC authentication, i.e.
+These instructions assume that you have a IBM COS S3 endpoint configured with [HMAC authentication](https://console.bluemix.net/docs/services/cloud-object-storage/iam/service-credentials.html#service-credentials), i.e.
 
 Use the following steps to create a service credential:
 
