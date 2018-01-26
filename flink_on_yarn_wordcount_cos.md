@@ -2,17 +2,6 @@
 
 Run the Flink Word Count example on IBM Analytics Engine as a yarn application
 
-WARNING - these instructions are currently broken.  The error message is:
-
-```
-Caused by: org.apache.flink.runtime.client.JobExecutionException: Cannot initialize task 'DataSink 
-   (CsvOutputFormat (path: s3://xxxxx/license-word-count.txt, delimiter:  ))': 
-   doesBucketExist on csnow-us-geo: org.apache.flink.fs.s3hadoop.shaded.com.amazonaws.AmazonClientException: 
-   No AWS Credentials provided by BasicAWSCredentialsProvider EnvironmentVariableCredentialsProvider 
-   SharedInstanceProfileCredentialsProvider : org.apache.flink.fs.s3hadoop.shaded.com.amazonaws.SdkClientException: 
-   Unable to load credentials from service endpoint
-```
-
 ### Configure IAE for COS
 
  - Open the Ambari console, and then the advanced configuration for HDFS.
