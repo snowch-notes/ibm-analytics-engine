@@ -1,8 +1,12 @@
-Open SSH session
+### Introduction
+
+Run the Flink Word Count example on IBM Analytics Engine as a yarn application
+
+### Open SSH session
 
     ssh clsadmin@your-cluster-name
 
-Setup Flink
+### Setup Flink
 
     # Download Flink
     wget -c -O flink-1.4.0-hadoop27-scala_2.11.tgz \
@@ -12,15 +16,15 @@ Setup Flink
     tar xf flink-1.4.0-hadoop27-scala_2.11.tgz
     
     
-Start Flink session
+### Start Flink session
 
-    # Run a Flink session - TODO how to determine arguments?
+    # Run a Flink session - TODO how to determine arguments (see below)?
     ./flink-1.4.0/bin/yarn-session.sh -d -n 4
 
     # View the Flink session running on yarn
     yarn application -list
 
-Deploy Flink job
+### Deploy Flink job
  
     # Download Apache license
     wget -O LICENSE-2.0.txt http://www.apache.org/licenses/LICENSE-2.0.txt
@@ -40,7 +44,7 @@ Deploy Flink job
     hadoop fs -cat hdfs:///user/clsadmin/license-word-count.txt
 
 ----
-Flink session arguments:
+### Flink session arguments:
 
 ```
 Usage:
