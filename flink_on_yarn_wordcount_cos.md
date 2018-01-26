@@ -29,6 +29,8 @@ Use the following steps to create a service credential:
 
 ### Configure IAE for COS
 
+These instructions are taken from the [IAE docs](https://console.bluemix.net/docs/services/AnalyticsEngine/configure-COS-S3-object-storage.html#configuring-clusters-to-work-with-ibm-cos-s3-object-stores).
+
  - Open the Ambari console, and then the advanced configuration for HDFS.
  - Ambari dashboard > HDFS > Configs > Advanced > Custom core-site > Add Property
  - Add the properties and values.
@@ -41,7 +43,7 @@ fs.cos.<servicename>.secret.key=<Secret Access Key>
 fs.cos.<servicename>.endpoint=<EndPoint URL>
 ```
 
-Also, set up S3 urls which are needed by Flink
+Also, in addition to the IAE documentation instructions, we need to set up to access S3 urls which are used by Flink
 
 ```
 fs.s3a.access.key=<Access Key ID>
