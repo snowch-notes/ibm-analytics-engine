@@ -2,6 +2,8 @@
 
 Run the Flink Word Count example on IBM Analytics Engine as a yarn application
 
+In this example, Flink reads a license from HDFS performs a word count and saves the output to HDFS.
+
 ### Open SSH session
 
     ssh clsadmin@your-cluster-name
