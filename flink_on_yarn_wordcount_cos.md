@@ -30,8 +30,8 @@ fs.cos.<servicename>.endpoint=<EndPoint URL>
 Also, set up S3 urls which are needed by Flink
 
 ```
-fs.s3.awsAccessKeyId=<Access Key ID>
-fs.s3.awsSecretAccessKey=<Secret Access Key>
+fs.s3a.access.key=<Access Key ID>
+fs.s3a.secret.key=<Secret Access Key>
 fs.s3a.endpoint=<EndPoint URL>
 ```
 
